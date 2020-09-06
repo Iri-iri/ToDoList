@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="todo_list">
+      <h1><span class="styling">TODO</span>list</h1>
+      <div class="create_new_todo">
+        <input type="text" class="message" placeholder="Ввод задания">
+        <input type="text" class="message message_description" placeholder="Описание">
+        <button class="add">Добавить</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container container__flex">
+    <div class="todo_list todo_list__small">
+      <h1>To Do</h1>
+      <div class="create_new_todo">
+        <div class="wrapper">
+          <ul class="todo"></ul>
+        </div>
+        <div class="wrapper_buttons">
+          <button class="button_image editButton"></button>
+          <button class="button_image progressButton"></button>
+          <button class="button_image deleteButton"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="todo_list todo_list__small">
+      <h1>In Progress</h1>
+      <div class="create_new_todo">
+      </div>
+    </div>
+
+    <div class="todo_list todo_list__small">
+      <h1>Done</h1>
+      <div class="create_new_todo">
+      </div>
+    </div>
+
+    <div class="todo_list todo_list__small">
+      <h1>Delete</h1>
+      <div class="create_new_todo">
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
