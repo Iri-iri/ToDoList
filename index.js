@@ -4,24 +4,28 @@ const addButton = document.querySelector(".add");
 let todo = document.querySelector(".todo");
 const editButton = document.querySelector(".editButton")
 
-let todoList = [];
+let data = {
+  todo: [],
+  inprogress: [],
+  done: [],
+  deleted: []
+};
 
 addButton.addEventListener("click", function () {
 
-  let newTodo = {
-    todo: addMessage.value + ": " + addMessageDescription.value
-  };
-
-  todoList.push(newTodo);
+  data.todo.push({
+    title: addMessage.value,
+    description: addMessageDescription.value
+  });
   displayMessages();
 });
 
 function displayMessages() {
   let displayMessage = "";
-  todoList.forEach(function (item) {
+  data.todo.forEach(function (item) {
     displayMessage += `
     <li>
-    ${item.todo}
+    ${item.title + ": " + item.description}
     <button class="button_image editButton"></button>
     <button class="button_image progressButton"></button>
     <button class="button_image deleteButton"></button>
